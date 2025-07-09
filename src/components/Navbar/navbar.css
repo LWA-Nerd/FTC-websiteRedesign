@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+    --color-secondary: #253E51;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #d1d5db;
+  color: #d1d5db;
+  transition: width 0.3s ease-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
